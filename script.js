@@ -10,15 +10,15 @@ const CONFIG = {
   collected: 1000000,           // مبلغ جمع‌آوری‌شده تا این لحظه — این را به‌روزرسانی کنید
 
   // اطلاعات کارت بانکی برای کمک
-  cardNumber: "XXXX-XXXX-XXXX-XXXX",
-  cardOwner: "نام صاحب حساب",
+  cardNumber: "6219-8619-7553-0845",
+  cardOwner: "رهام فلاح",
 
   // اطلاعات تماس
-  phone: "۰۹xxxxxxxxx",     // فقط برای نمایش
-  phoneHref: "+98",         // برای لینک tel: — به‌صورت بین‌المللی وارد کنید، مثل +989123456789
+  phone: "0998-156-1577",     // فقط برای نمایش
+  phoneHref: "+98981561577",         // برای لینک tel: — به‌صورت بین‌المللی وارد کنید، مثل +989123456789
   instagram: "instagram_id@",
   instagramUrl: "https://instagram.com/",
-  telegram: "telegram_id@",
+  telegram: "@RRoham2000",
   telegramUrl: "https://t.me/",
 };
 
