@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>کمک کنیم دوباره راه بره ❤️ | کمک‌هزینه درمان گربه</title>
+<meta name="description" content="داستان یک گربه آسیب‌دیده، وضعیت درمان و روش‌های کمک به هزینه‌های دامپزشکی او.">
+
+<!--
+  ================================================================
+  راهنمای سریع ویرایش (این کامنت را می‌توانید حذف کنید)
+  ================================================================
+  ۱) تقریباً همهٔ مقادیر قابل‌تغییر (نام گربه، مبلغ جمع‌شده، شمارهٔ کارت،
+     شبکه‌های اجتماعی و ...) در فایل script.js داخل شیء CONFIG قرار دارند.
+     کافی‌ست همان‌جا مقدارها را عوض کنید؛ کل صفحه خودکار به‌روز می‌شود.
+  ۲) برای جایگزینی هر عکس، فقط فایل تصویر واقعی را با همان نام داخل
+     پوشهٔ images/ قرار دهید (مثلاً images/cat-main.jpg). تا وقتی عکس
+     واقعی نباشد، یک جای‌نگهدار (Placeholder) زیبا نمایش داده می‌شود.
+  ۳) برای افزودن گزارش جدید به بخش «به‌روزرسانی‌ها»، به دنبال کامنت
+     «افزودن به‌روزرسانی جدید» در همین فایل بگردید و یک کارت جدید کپی کنید.
+  ۴) متن‌های داستان و مراحل درمان مستقیماً در همین فایل HTML نوشته شده‌اند؛
+     هرجا لازم بود، آن‌ها را ویرایش کنید (به دنبال کامنت‌های TODO بگردید).
+  ================================================================
+-->
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="کمک کنیم دوباره راه بره ❤️">
+<meta property="og:description" content="داستان یک گربه آسیب‌دیده، وضعیت درمان و روش‌های کمک به هزینه‌های دامپزشکی او.">
+<!-- TODO: بعد از انتشار روی GitHub Pages / Cloudflare Pages، آدرس واقعی صفحه و عکس را اینجا بگذارید -->
+<meta property="og:url" content="">
+<meta property="og:image" content="images/cat-main.jpg">
+<meta name="theme-color" content="#E08A3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#donate">رفتن به بخش کمک مالی</a>
+
+<!-- ============ نوار بالای صفحه ============ -->
+<header class="topbar">
+  <div class="topbar__inner">
+    <span class="topbar__brand">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-paw"></use></svg>
+      <span id="topbar-cat-name">نام گربه</span>
+    </span>
+    <a href="#donate" class="btn btn--small btn--primary">کمک می‌کنم</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ بخش ۱: معرفی گربه (Hero) ============ -->
+  <section class="hero">
+    <div class="media-box media-box--hero">
+      <span class="media-box__placeholder">
+        <svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-image"></use></svg>
+        عکس اصلی گربه (Placeholder)
+      </span>
+      <!-- برای گذاشتن عکس واقعی، فایل را با نام cat-main.jpg داخل پوشهٔ images بگذارید -->
+      <img class="media-box__img" src="images/cat-main.jpg" alt="عکس اصلی گربه" onerror="this.remove()">
+    </div>
+
+    <div class="hero__content">
+      <p class="eyebrow">داستان یک گربهٔ کوچک</p>
+      <h1 class="hero__title">کمک کنیم <span id="hero-cat-name">نام گربه</span> دوباره راه بره ❤️</h1>
+      <p class="hero__subtitle" id="hero-summary">
+        این گربهٔ کوچک دچار شکستگی لگن شده و برای دوباره راه‌رفتن، به درمان و احتمالاً جراحی نیاز دارد.
+        با کمک شما، درد او کمتر می‌شود.
+      </p>
+      <div class="hero__actions">
+        <a href="#donate" class="btn btn--primary">کمک می‌کنم ❤️</a>
+        <a href="#story" class="btn btn--ghost">خواندن داستان</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ بخش ۲: داستان گربه ============ -->
+  <section id="story" class="section story">
+    <h2 class="section__title">داستانِ <span class="cat-name">نام گربه</span></h2>
+
+    <!-- TODO: این پاراگراف‌ها را هر زمان اطلاعات جدیدی داشتید، ویرایش کنید -->
+    <div class="story__text">
+      <p>
+        <span class="cat-name">نام گربه</span> را یکی از دوستان ما، در حالی که به‌سختی راه می‌رفت و درد می‌کشید، پیدا کرد.
+        او را بدون هیچ چشم‌داشتی به خانه آورد تا کمکش کند.
+      </p>
+      <p>
+        در معاینهٔ اولیه مشخص شد که <span class="cat-name">نام گربه</span> دچار <strong>شکستگی لگن</strong> شده است؛
+        شکستگی‌ای که باعث می‌شود راه‌رفتن برایش دردناک و سخت باشد.
+      </p>
+      <p>
+        پس از مراجعه به دامپزشک، تشخیص داده شد که برای بهبودی کامل، به درمان تخصصی و احتمالاً
+        <strong>جراحی</strong> نیاز دارد. هزینهٔ تقریبی این درمان حدود
+        <strong>۴۵,۰۰۰,۰۰۰ تومان</strong> برآورد شده است؛ مبلغی که به‌تنهایی از عهدهٔ ما خارج است.
+      </p>
+      <p>
+        به همین دلیل، از همهٔ کسانی که دلشان برای حیوان‌های بی‌زبان می‌تپد، درخواست کمک داریم؛
+        هر کمکی، هرچقدر هم کوچک، یک قدم <span class="cat-name">نام گربه</span> را به راه‌رفتنِ دوباره نزدیک‌تر می‌کند.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ بخش ۳: وضعیت مالی ============ -->
+  <section class="section finance">
+    <h2 class="section__title">وضعیت جمع‌آوری کمک</h2>
+
+    <div class="finance__amount">
+      <span class="finance__amount-label">هزینهٔ کل درمان</span>
+      <span class="finance__amount-value" id="finance-total">۴۵,۰۰۰,۰۰۰ <small>تومان</small></span>
+    </div>
+
+    <div class="progress" role="progressbar" aria-label="درصد جمع‌آوری کمک هزینه" aria-valuemin="0" aria-valuemax="100" id="progress-bar" aria-valuenow="0">
+      <div class="progress__track">
+        <div class="progress__fill" id="progress-fill" style="width:0%"></div>
+      </div>
+      <span class="progress__percent" id="progress-percent">۰٪</span>
+    </div>
+
+    <div class="finance__grid">
+      <div class="finance__stat">
+        <span class="finance__stat-label">جمع‌آوری‌شده</span>
+        <span class="finance__stat-value finance__stat-value--positive" id="finance-collected">۰ تومان</span>
+      </div>
+      <div class="finance__stat">
+        <span class="finance__stat-label">باقی‌مانده</span>
+        <span class="finance__stat-value" id="finance-remaining">۴۵,۰۰۰,۰۰۰ تومان</span>
+      </div>
+    </div>
+    <p class="finance__note">* این اعداد به‌محض دریافت کمک‌های جدید، در فایل تنظیمات به‌روزرسانی می‌شوند.</p>
+  </section>
+
+  <!-- ============ بخش ۴: روند درمان (Timeline) ============ -->
+  <section class="section timeline-section">
+    <h2 class="section__title">روند درمان</h2>
+
+    <ol class="timeline">
+      <li class="timeline__item timeline__item--done">
+        <span class="timeline__dot"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg></span>
+        <div class="timeline__body">
+          <h3 class="timeline__title">پیدا شدن گربه</h3>
+          <p class="timeline__text"><span class="cat-name">نام گربه</span> توسط یکی از دوستان ما پیدا و به خانه آورده شد.</p>
+        </div>
+      </li>
+      <li class="timeline__item timeline__item--done">
+        <span class="timeline__dot"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg></span>
+        <div class="timeline__body">
+          <h3 class="timeline__title">مراجعه به دامپزشک</h3>
+          <p class="timeline__text">برای بررسی وضعیت جسمی، به یک کلینیک دامپزشکی مراجعه شد.</p>
+        </div>
+      </li>
+      <li class="timeline__item timeline__item--done">
+        <span class="timeline__dot"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-check"></use></svg></span>
+        <div class="timeline__body">
+          <h3 class="timeline__title">تشخیص شکستگی لگن</h3>
+          <p class="timeline__text">در معاینه و تصویربرداری، شکستگی لگن تأیید شد.</p>
+        </div>
+      </li>
+      <!-- TODO: هرکدام از مراحل زیر که انجام شد، کلاس را از timeline__item--pending به timeline__item--done تغییر دهید -->
+      <li class="timeline__item timeline__item--pending">
+        <span class="timeline__dot"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-clock"></use></svg></span>
+        <div class="timeline__body">
+          <h3 class="timeline__title">جراحی / درمان</h3>
+          <p class="timeline__text">اطلاعات این مرحله به‌زودی تکمیل می‌شود. (Placeholder)</p>
+        </div>
+      </li>
+      <li class="timeline__item timeline__item--pending">
+        <span class="timeline__dot"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-clock"></use></svg></span>
+        <div class="timeline__body">
+          <h3 class="timeline__title">دوران نقاهت</h3>
+          <p class="timeline__text">اطلاعات این مرحله به‌زودی تکمیل می‌شود. (Placeholder)</p>
+        </div>
+      </li>
+      <li class="timeline__item timeline__item--pending">
+        <span class="timeline__dot"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-clock"></use></svg></span>
+        <div class="timeline__body">
+          <h3 class="timeline__title">بهبودی</h3>
+          <p class="timeline__text">اطلاعات این مرحله به‌زودی تکمیل می‌شود. (Placeholder)</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ بخش ۵: عکس‌ها و مدارک ============ -->
+  <section class="section gallery-section">
+    <h2 class="section__title">عکس‌ها و مدارک</h2>
+    <p class="section__desc">عکس‌های گربه، تصاویر رادیولوژی، مدارک دامپزشکی و روند درمان.</p>
+
+    <div class="gallery__tabs" id="gallery-tabs" role="tablist" aria-label="دسته‌بندی تصاویر">
+      <button class="gallery__tab is-active" data-filter="all">همه</button>
+      <button class="gallery__tab" data-filter="cat">عکس‌های گربه</button>
+      <button class="gallery__tab" data-filter="xray">رادیولوژی</button>
+      <button class="gallery__tab" data-filter="docs">مدارک و فاکتور</button>
+      <button class="gallery__tab" data-filter="before-after">قبل و بعد</button>
+      <button class="gallery__tab" data-filter="progress">روند درمان</button>
+    </div>
+
+    <div class="gallery__grid" id="gallery-grid">
+      <!-- برای افزودن هر آیتم جدید، یکی از بلوک‌های زیر را کپی کرده و src و data-filter را تغییر دهید -->
+      <figure class="gallery__item" data-filter="cat">
+        <div class="media-box">
+          <span class="media-box__placeholder"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-image"></use></svg>عکس گربه</span>
+          <img class="media-box__img" src="images/cat-1.jpg" alt="عکس گربه" loading="lazy" onerror="this.remove()">
+        </div>
+      </figure>
+      <figure class="gallery__item" data-filter="cat">
+        <div class="media-box">
+          <span class="media-box__placeholder"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-image"></use></svg>عکس گربه</span>
+          <img class="media-box__img" src="images/cat-2.jpg" alt="عکس گربه" loading="lazy" onerror="this.remove()">
+        </div>
+      </figure>
+      <figure class="gallery__item" data-filter="xray">
+        <div class="media-box">
+          <span class="media-box__placeholder"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-image"></use></svg>عکس رادیولوژی</span>
+          <img class="media-box__img" src="images/xray-1.jpg" alt="عکس رادیولوژی لگن" loading="lazy" onerror="this.remove()">
+        </div>
+      </figure>
+      <figure class="gallery__item" data-filter="docs">
+        <div class="media-box">
+          <span class="media-box__placeholder"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-doc"></use></svg>مدرک دامپزشکی</span>
+          <img class="media-box__img" src="images/doc-1.jpg" alt="مدرک دامپزشکی" loading="lazy" onerror="this.remove()">
+        </div>
+      </figure>
+      <figure class="gallery__item" data-filter="docs">
+        <div class="media-box">
+          <span class="media-box__placeholder"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-doc"></use></svg>فاکتور درمان</span>
+          <img class="media-box__img" src="images/invoice-1.jpg" alt="فاکتور هزینهٔ درمان" loading="lazy" onerror="this.remove()">
+        </div>
+      </figure>
+      <figure class="gallery__item" data-filter="before-after">
+        <div class="media-box">
+          <span class="media-box__placeholder"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-image"></use></svg>قبل از درمان</span>
+          <img class="media-box__img" src="images/before-1.jpg" alt="قبل از درمان" loading="lazy" onerror="this.remove()">
+        </div>
+      </figure>
+      <figure class="gallery__item" data-filter="before-after">
+        <div class="media-box">
+          <span class="media-box__placeholder"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-image"></use></svg>بعد از درمان</span>
+          <img class="media-box__img" src="images/after-1.jpg" alt="بعد از درمان" loading="lazy" onerror="this.remove()">
+        </div>
+      </figure>
+      <figure class="gallery__item" data-filter="progress">
+        <div class="media-box">
+          <span class="media-box__placeholder"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-image"></use></svg>روند درمان</span>
+          <img class="media-box__img" src="images/progress-1.jpg" alt="روند درمان" loading="lazy" onerror="this.remove()">
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ بخش ۶: کمک مالی ============ -->
+  <section id="donate" class="section donate">
+    <h2 class="section__title">اگر می‌توانید کمک کنید ❤️</h2>
+    <p class="section__desc">هر مبلغی، هرچقدر هم که کوچک باشد، یک قدم واقعی برای بهبودی <span class="cat-name">نام گربه</span> است.</p>
+
+    <div class="donate__card">
+      <div class="donate__row">
+        <span class="donate__label">شمارهٔ کارت</span>
+        <div class="donate__value-row">
+          <span class="donate__value donate__value--mono" id="card-number">XXXX-XXXX-XXXX-XXXX</span>
+          <button class="btn-icon" id="copy-card-btn" type="button" aria-label="کپی شماره کارت">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-copy"></use></svg>
+          </button>
+        </div>
+      </div>
+      <div class="donate__row">
+        <span class="donate__label">به نام</span>
+        <span class="donate__value" id="card-owner">نام صاحب حساب</span>
+      </div>
+    </div>
+
+    <div class="donate__qr">
+      <div class="media-box media-box--qr">
+        <span class="media-box__placeholder"><svg class="icon icon--lg" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-image"></use></svg>QR کد پرداخت (Placeholder)</span>
+        <img class="media-box__img" src="images/payment-qr.png" alt="QR کد پرداخت" onerror="this.remove()">
+      </div>
+      <p class="donate__qr-caption">برای پرداخت سریع، این کد را با اپلیکیشن بانکی خود اسکن کنید.</p>
+    </div>
+
+    <p id="copy-toast" class="toast" role="status" aria-live="polite"></p>
+  </section>
+
+  <!-- ============ بخش ۷: اطلاعات تماس ============ -->
+  <section class="section contact">
+    <h2 class="section__title">در ارتباط باشید</h2>
+    <ul class="contact__list">
+      <li class="contact__item">
+        <a class="contact__link" id="contact-phone" href="tel:+98">
+          <span class="contact__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-phone"></use></svg></span>
+          <span>
+            <span class="contact__label">شمارهٔ تماس</span>
+            <span class="contact__value" id="contact-phone-text">۰۹xxxxxxxxx</span>
+          </span>
+        </a>
+      </li>
+      <li class="contact__item">
+        <a class="contact__link" id="contact-instagram" href="https://instagram.com/" target="_blank" rel="noopener">
+          <span class="contact__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-instagram"></use></svg></span>
+          <span>
+            <span class="contact__label">اینستاگرام</span>
+            <span class="contact__value" id="contact-instagram-text">instagram_id@</span>
+          </span>
+        </a>
+      </li>
+      <li class="contact__item">
+        <a class="contact__link" id="contact-telegram" href="https://t.me/" target="_blank" rel="noopener">
+          <span class="contact__icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-telegram"></use></svg></span>
+          <span>
+            <span class="contact__label">تلگرام</span>
+            <span class="contact__value" id="contact-telegram-text">telegram_id@</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+
+    <button class="btn btn--ghost btn--full" id="copy-link-btn" type="button">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-link"></use></svg>
+      کپی لینک همین صفحه برای استوری
+    </button>
+  </section>
+
+  <!-- ============ بخش ۸: به‌روزرسانی‌ها ============ -->
+  <section class="section updates">
+    <h2 class="section__title">به‌روزرسانی‌های درمان</h2>
+
+    <ul class="updates__list" id="updates-list">
+      <!--
+        افزودن به‌روزرسانی جدید:
+        این بلوک <li> را کپی کنید، تاریخ و متن را عوض کنید و بالای لیست بچسبانید
+        (جدیدترین گزارش همیشه در بالای لیست قرار بگیرد).
+      -->
+      <li class="updates__item">
+        <span class="updates__date">Placeholder — تاریخ گزارش</span>
+        <h3 class="updates__title">اولین گزارش به‌زودی منتشر می‌شود</h3>
+        <p class="updates__text">
+          به‌محض مراجعهٔ بعدی به دامپزشک و مشخص‌شدن جزئیات بیشتر (هزینهٔ پرداخت‌شده،
+          نتیجهٔ جراحی، وضعیت سلامتی)، گزارش کامل همین‌جا قرار می‌گیرد.
+        </p>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<!-- ============ نوار پایین ثابت (موبایل) ============ -->
+<div class="sticky-cta">
+  <div class="sticky-cta__text">
+    <span id="sticky-remaining">۴۵,۰۰۰,۰۰۰ تومان</span>
+    <small>باقی‌مانده تا هدف</small>
+  </div>
+  <a href="#donate" class="btn btn--primary btn--small">کمک می‌کنم</a>
+</div>
+
+<footer class="footer">
+  <p>این صفحه با ❤️ برای کمک به بهبودی <span class="cat-name">نام گربه</span> ساخته شده است.</p>
+</footer>
+
+<!-- مجموعهٔ آیکون‌ها (یک‌بار تعریف، در همه‌جای صفحه با use استفاده می‌شود) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="icon-paw" viewBox="0 0 24 24"><path fill="currentColor" d="M8.2 12.6c-1.4 0-2.9 1-3.6 2.5-.6 1.4-.3 2.9 1 3.5.9.4 1.7-.1 2.5-.1.8 0 1.6.5 2.5.1.7-.3 1.2-.9 1.3-1.7.3-1.7-.5-3.2-1.6-3.8-.6-.3-1.3-.5-2.1-.5zm7.6 0c-.8 0-1.5.2-2.1.5-1.1.6-1.9 2.1-1.6 3.8.1.8.6 1.4 1.3 1.7.9.4 1.7-.1 2.5-.1.8 0 1.6.5 2.5.1 1.3-.6 1.6-2.1 1-3.5-.7-1.5-2.2-2.5-3.6-2.5zM6.3 6.8c-1.1 0-2 1.1-2 2.4s.9 2.4 2 2.4 2-1.1 2-2.4-.9-2.4-2-2.4zm11.4 0c-1.1 0-2 1.1-2 2.4s.9 2.4 2 2.4 2-1.1 2-2.4-.9-2.4-2-2.4zM12 5.2c-1.2 0-2.2 1.2-2.2 2.7s1 2.7 2.2 2.7 2.2-1.2 2.2-2.7-1-2.7-2.2-2.7z"/></symbol>
+  <symbol id="icon-heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 20.6s-7.6-4.6-10-9C.5 8.5 2 5 5.4 5c2 0 3.3 1 4.6 2.6C11.3 6 12.6 5 14.6 5 18 5 19.5 8.5 22 11.6c-2.4 4.4-10 9-10 9z"/></symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M6.6 10.8c1.3 2.6 3.4 4.7 6 6l2-2c.3-.3.7-.4 1-.3 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V19c0 .6-.4 1-1 1C10.6 20 4 13.4 4 5c0-.6.4-1 1-1h2.9c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.3 1l-2 2.3z"/></symbol>
+  <symbol id="icon-instagram" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16.6" cy="7.4" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="icon-telegram" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M21 4.5 3.5 11.2c-.7.3-.7 1.3.1 1.5l4.2 1.3 1.6 4.9c.2.7 1.1.8 1.6.2l2.2-2.6 4.3 3.2c.6.4 1.5.1 1.6-.6L21.9 5.4c.2-.7-.5-1.2-1-.9z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m7.8 14 9.4-7.8-7.6 9"/></symbol>
+  <symbol id="icon-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+  <symbol id="icon-link" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M9 15l6-6M10.5 6.5l1-1a3.5 3.5 0 0 1 5 5l-1.5 1.5M13.5 17.5l-1 1a3.5 3.5 0 0 1-5-5l1.5-1.5"/></symbol>
+  <symbol id="icon-image" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="10" r="1.6" fill="currentColor"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" d="M4.5 16.5 9 12l3 3 3.5-3.5 4.5 4.5"/></symbol>
+  <symbol id="icon-doc" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M7 3.5h7l4 4v13H7z"/><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M14 3.5v4h4"/><path fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" d="M9.5 12h5M9.5 15h5M9.5 9h2"/></symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5 9.5 17 19 7.5"/></symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M12 8v4.5l3 2"/></symbol>
+</svg>
+
+<script src="script.js"></script>
+</body>
+</html>
