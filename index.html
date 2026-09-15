@@ -184,6 +184,32 @@
     </ol>
   </section>
 
+  <!-- ============ بخش ویدیو ============ -->
+  <!--
+    برای نمایش ویدیو:
+    ۱) فایل ویدیو را با نام cat-video.mp4 داخل پوشهٔ images آپلود کنید.
+    ۲) اگر عکس کاور (تصویر اولیه قبل از پخش) دارید، آن را با نام
+       video-poster.jpg در همان پوشه بگذارید. اگر نگذارید هم مشکلی نیست.
+    ۳) اگر ویدیو ندارید، این بخش خودکار پنهان می‌شود.
+  -->
+  <section class="section video-section" id="video-section" hidden>
+    <h2 class="section__title">ویدیوی <span class="cat-name">نام گربه</span></h2>
+    <p class="section__desc">دیدن وضعیت او، بیشتر از هر توضیحی گویاست.</p>
+
+    <div class="video-wrap">
+      <video
+        id="cat-video"
+        class="video-player"
+        controls
+        preload="metadata"
+        playsinline
+        poster="images/video-poster.jpg">
+        <source src="images/cat-video.mp4" type="video/mp4">
+        مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+      </video>
+    </div>
+  </section>
+
   <!-- ============ بخش ۵: عکس‌ها و مدارک ============ -->
   <section class="section gallery-section">
     <h2 class="section__title">عکس‌ها و مدارک</h2>
@@ -374,5 +400,15 @@
 </svg>
 
 <script src="script.js"></script>
+<script>
+// اگر فایل ویدیو موجود باشد، بخش ویدیو نمایش داده می‌شود؛ در غیر این صورت پنهان می‌ماند.
+(function () {
+  var section = document.getElementById("video-section");
+  var video = document.getElementById("cat-video");
+  if (!section || !video) return;
+  video.addEventListener("loadedmetadata", function () { section.hidden = false; });
+  video.addEventListener("error", function () { section.hidden = true; });
+})();
+</script>
 </body>
 </html>
