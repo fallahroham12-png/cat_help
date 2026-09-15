@@ -566,3 +566,20 @@ a { color: inherit; }
 @media (min-width: 1000px) {
   .gallery__grid { grid-template-columns: repeat(4, 1fr); }
 }
+
+/* ---------- بخش ویدیو ---------- */
+.video-wrap {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #000;
+  border: 1.5px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+}
+.video-player {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  background: #000;
+}
