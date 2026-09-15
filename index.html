@@ -187,24 +187,38 @@
   <!-- ============ بخش ویدیو ============ -->
   <!--
     برای نمایش ویدیو:
-    ۱) فایل ویدیو را با نام cat-video.mp4 داخل پوشهٔ images آپلود کنید.
-    ۲) اگر عکس کاور (تصویر اولیه قبل از پخش) دارید، آن را با نام
-       video-poster.jpg در همان پوشه بگذارید. اگر نگذارید هم مشکلی نیست.
-    ۳) اگر ویدیو ندارید، این بخش خودکار پنهان می‌شود.
+    ۱) فایل ویدیوی اول را با نام cat-video.mp4 داخل پوشهٔ images آپلود کنید.
+    ۲) اگر ویدیوی دوم هم دارید، آن را با نام cat-video-2.mp4 در همان پوشه بگذارید.
+       (در صورت نیاز به ویدیوهای بیشتر، به همین شکل یک بلوک <video> دیگر
+       با کلاس "video-player" و src بعدی مثل cat-video-3.mp4 کپی کنید.)
+    ۳) عکس کاور اختیاری: video-poster.jpg و video-poster-2.jpg
+    ۴) اگر فایلی وجود نداشته باشد، همان ویدیو به‌تنهایی مخفی می‌شود؛
+       اگر هیچ‌کدام نباشند، کل بخش مخفی می‌شود.
   -->
   <section class="section video-section" id="video-section" hidden>
     <h2 class="section__title">ویدیوی <span class="cat-name">نام گربه</span></h2>
     <p class="section__desc">دیدن وضعیت او، بیشتر از هر توضیحی گویاست.</p>
 
-    <div class="video-wrap">
+    <div class="video-wrap" hidden>
       <video
-        id="cat-video"
         class="video-player"
         controls
         preload="metadata"
         playsinline
         poster="images/video-poster.jpg">
         <source src="images/cat-video.mp4" type="video/mp4">
+        مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
+      </video>
+    </div>
+
+    <div class="video-wrap" hidden>
+      <video
+        class="video-player"
+        controls
+        preload="metadata"
+        playsinline
+        poster="images/video-poster-2.jpg">
+        <source src="images/cat-video-2.mp4" type="video/mp4">
         مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند.
       </video>
     </div>
@@ -401,13 +415,26 @@
 
 <script src="script.js"></script>
 <script>
-// اگر فایل ویدیو موجود باشد، بخش ویدیو نمایش داده می‌شود؛ در غیر این صورت پنهان می‌ماند.
+// هر ویدیویی که فایلش موجود باشد نشان داده می‌شود؛ اگر هیچ‌کدام موجود نباشند کل بخش پنهان می‌ماند.
 (function () {
   var section = document.getElementById("video-section");
-  var video = document.getElementById("cat-video");
-  if (!section || !video) return;
-  video.addEventListener("loadedmetadata", function () { section.hidden = false; });
-  video.addEventListener("error", function () { section.hidden = true; });
+  if (!section) return;
+  var wraps = section.querySelectorAll(".video-wrap");
+  var remaining = wraps.length;
+
+  wraps.forEach(function (wrap) {
+    var video = wrap.querySelector("video");
+    if (!video) { remaining--; return; }
+    video.addEventListener("loadedmetadata", function () {
+      wrap.hidden = false;
+      section.hidden = false;
+    });
+    video.addEventListener("error", function () {
+      wrap.hidden = true;
+      remaining--;
+      if (remaining <= 0) section.hidden = true;
+    }, true);
+  });
 })();
 </script>
 </body>
